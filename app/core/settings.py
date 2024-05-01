@@ -10,7 +10,7 @@ SECRET_KEY = get_random_secret_key()
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
-ROOT_URLCONF = 'core.urls'
+ROOT_URLCONF = 'router.urls'
 
 STATIC_URL = 'static/'
 
