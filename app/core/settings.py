@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-
+AUTH_USER_MODEL = "data.AppUser"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
