@@ -33,7 +33,7 @@ class Club(models.Model):
     map_lng = models.FloatField(null=False, blank=False, verbose_name="Широта на карте")
 
     def __str__(self) -> str:
-        return f"Клуб #{self.id} | {self.title}"
+        return f"{self.title}"
 
     class Meta:
         verbose_name = "Клуб"
@@ -48,7 +48,7 @@ class PCLevel(models.Model):
     desc = models.TextField(null=True, blank=True, verbose_name="Описание")
 
     def __str__(self) -> str:
-        return f"Уровень компьютера #{self.id} | {self.title}"
+        return f"{self.title}"
 
     class Meta:
         verbose_name = "Уровень компьютера"
