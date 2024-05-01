@@ -34,7 +34,10 @@ INSTALLED_APPS = [
     'api',
     'data',
     'router',
-    
+
+    'rest_framework',
+    'djoser',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
