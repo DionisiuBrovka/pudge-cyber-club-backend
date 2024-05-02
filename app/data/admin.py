@@ -7,7 +7,8 @@ from .models import *
 # -------------------------------------------------------------------------
 @admin.register(AppUser)
 class AppUserAdminModel(admin.ModelAdmin):
-    list_display = ['username', 'is_active', 'is_staff', 'is_superuser']
+    list_display = ['username','bonus_balance', 'is_active',]
+    list_filter = ['is_active', 'is_staff', 'is_superuser']
 
 
 # Клуб
