@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'router',
 
     'rest_framework',
+    'rest_framework.authtoken',
     'djoser',
 
     'django.contrib.admin',
@@ -105,6 +106,15 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+}
 
 
 
