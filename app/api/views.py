@@ -2,6 +2,7 @@ from rest_framework.viewsets import ModelViewSet
 
 from data.models import *
 from .serializers import *
+from .permission import *
 
 class MultiSerializerViewSet(ModelViewSet):
     serializers = { 
@@ -15,6 +16,7 @@ class MultiSerializerViewSet(ModelViewSet):
 class ClubViewSet(MultiSerializerViewSet):
     model  = Club
     queryset = Club.objects.all()
+    permission_classes = (AppBasePermissionClass,)
     serializers = {
         'list':    ClubListSerializer,
         'detail':  ClubSerializer,
@@ -26,6 +28,7 @@ class ClubViewSet(MultiSerializerViewSet):
 class PCLevelViewSet(MultiSerializerViewSet):
     model  = PCLevel
     queryset = PCLevel.objects.all()
+    permission_classes = (AppBasePermissionClass,)
     serializers = {
         'list':    PCLevelListSerializer,
         'detail':  PCLevelSerializer,
@@ -37,6 +40,7 @@ class PCLevelViewSet(MultiSerializerViewSet):
 class PCViewSet(MultiSerializerViewSet):
     model  = PC
     queryset = PC.objects.all()
+    permission_classes = (AppBasePermissionClass,)
     serializers = {
         'list':    PCListSerializer,
         'detail':  PCSerializer,
