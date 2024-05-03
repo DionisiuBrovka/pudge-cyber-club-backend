@@ -103,3 +103,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+
+DJOSER = {
+    'SEND_ACTIVATION_EMAIL': True,
+    'SERIALIZERS': {
+        'user': 'api.serializers.AppUserSerializer',
+    },
+}
