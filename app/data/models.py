@@ -1,14 +1,27 @@
+import os
+
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
+import string
+import random
+
+
 # Create your models here.
+def avatar_file_name(instance, filename):
+    def id_generator(size=6, chars=string.ascii_letters + string.digits):
+        return ''.join(random.choice(chars) for _ in range(size))
+
+    ext = filename.split('.')[-1]
+    filename = "%s_%s.%s" % ("avatar", id_generator(size=16), ext)
+    return os.path.join('static/avatars', filename)
 
 
 # Пользователь
 # -------------------------------------------------------------------------
 class AppUser(AbstractUser):
     bonus_balance = models.FloatField(null=False, blank=True, default=0.0, verbose_name="Балланс бонусов")
-    avatar = models.ImageField(null=True, blank=True, verbose_name="Аватарка")
+    avatar = models.ImageField(upload_to=avatar_file_name, null=True, blank=True, verbose_name="Аватарка")
 
     def __str__(self) -> str:
         return f"Пользователь #{self.id} | {self.username}"

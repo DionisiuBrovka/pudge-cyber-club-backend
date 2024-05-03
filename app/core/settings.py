@@ -14,6 +14,8 @@ ROOT_URLCONF = 'router.urls'
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = 'static/'
+
 LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'Europe/Minsk'
