@@ -6,10 +6,21 @@
 
 ## How to Build
 
-*NOTHING TO BUILD YET*
+To build backend application follow next steps:
 
-> TODO -- write this
-
+1. Add envirement file to: ```app/.env```
+    ```.env
+    export DEBUG = {}
+    export DB_NAME = {}
+    export DB_USER = {}
+    export DB_USER_PASSWORD = {}
+    export DB_HOST = {}
+    export DB_DB_PORT = {}
+    ```
+2. Add password for db file to: ```db/password.txt```
+3. Up docker compose stack: ```docker compose up -d```
+4. Make migarations for db in django aplication container: ```python manage.py migrate``` 
+5. Collect static filles: ```python manage.py collectstatic``` 
 
 ---
 
