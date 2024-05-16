@@ -1,0 +1,22 @@
+[
+    {
+        "model": "data.appuser",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$EacDE7Vgm23ddTKnhdCrpU$obP6rDhehYJpbuTT/Z8G/AW4TPvcX8UKkbLrJtOc9S0=",
+            "last_login": null,
+            "is_superuser": true,
+            "username": "dionisiu",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-05-16T09:06:52.167Z",
+            "bonus_balance": 0.0,
+            "avatar": "",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]
