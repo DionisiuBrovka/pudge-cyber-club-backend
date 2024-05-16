@@ -141,4 +141,4 @@ GitHub.sublime-settings
 # Static files #
 static
 media
-db
+db/password.txt
