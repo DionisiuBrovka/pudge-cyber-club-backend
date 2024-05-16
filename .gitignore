@@ -135,4 +135,10 @@ GitHub.sublime-settings
 !.vscode/tasks.json 
 !.vscode/launch.json 
 !.vscode/extensions.json 
+*.code-workspace
 .history
+
+# Static files #
+static
+media
+db/password.txt 
